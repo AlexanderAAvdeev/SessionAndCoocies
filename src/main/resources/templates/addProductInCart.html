@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add product in cart</title>
+</head>
+<body>
+<h3>Add product to cart</h3>
+<form th:method="POST" th:action="@{/product/add/in/cart}" th:object="${cart}">
+  <label for="name">Input name of product</label>
+  <input type="text" th:field="*{name}" id="name">
+    <br>
+  <label for="quantity">Input quantity of product</label>
+  <input type="number" th:field="*{quantity}" id="quantity" min="1">
+    <br>
+  <label for="price">Input price of product</label>
+  <input type="number" th:field="*{price}" id="price">
+    <br>
+  <button type="submit">Confirm add</button>
+</form>
+
+</body>
+</html>

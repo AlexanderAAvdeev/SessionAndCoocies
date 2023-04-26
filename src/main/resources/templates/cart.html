@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+<div th:if="${session.cart !=null}">
+<p th:text=" 'Name of item: ' + ${session.cart.getName()} "></p>
+<p th:text=" 'Price of item: ' + ${session.cart.getPrice()} "></p>
+<p th:text=" 'Quantity of item: ' + ${session.cart.getQuantity()}"></p>
+</div>
+<div th:if="${session.cart == null}">
+    <p style="color: red">Cart is empty</p>
+</div>
+<a href="/product/add/in/cart">Add item to cart</a>
+</body>
+</html>
